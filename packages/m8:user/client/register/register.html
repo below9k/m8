@@ -1,0 +1,19 @@
+<template name="Register">
+    <div class="m8-register">
+        {{#each getFields}}
+        <div class="status">
+            <span class="label">{{#if label}}{{label}}&colon;{{/if}}&nbsp;</span>
+            {{#if error}}<span class="error">{{error}}</span>{{/if}}
+        </div>
+        <div class="ui input">
+            <input type="{{type}}" name="{{name}}" id="{{name}}" placeholder="{{placeholder}}" value="{{value}}">
+        </div>
+        {{#if confirm}}
+        <div class="ui input">
+            <input type="{{type}}" name="{{name}}_confirm" id="{{name}}_confirm" placeholder="{{placeholder}}" value="{{value}}">
+        </div>
+        {{/if}}
+        {{/each}}
+        <button class="ui button primary" id="doRegister" name="doRegister">Register</button>
+    </div>
+</template>

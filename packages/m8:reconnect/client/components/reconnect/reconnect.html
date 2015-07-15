@@ -1,0 +1,11 @@
+<template name="Reconnect">
+    {{#if isServerDisconnected}}
+    <div class="reconnect-notification">
+        <span class="status"><i class="fa fa-exclamation-triangle">&nbsp;</i>{{getStatus}}&nbsp;-&nbsp;</span>
+        {{#if isServerWaiting}}
+        <span class="retry">Retry in {{getRetryTime}} seconds ({{getRetryCount}})</span>
+        {{/if}}
+        <span class="reconnect"><i class="fa fa-refresh">&nbsp;</i>Click here to try reconnecting now</span>
+    </div>
+    {{/if}}
+</template>

@@ -1,0 +1,26 @@
+<template name="m8HeaderDropDown">
+    <div class="ui dropdown">
+        {{#with dropdown_title}}
+        {{#if icon}}<i class="{{icon}} icon"></i>&nbsp;{{/if}}
+        {{text}}
+        {{/with}}
+        <i class="dropdown icon"></i>
+        <div class="left menu">
+            {{#each dropdown_selection}}
+            <div class="item">
+                {{#if route}}
+                 <a href="{{pathFor route=route}}">
+                     {{#if icon}}<i class="{{icon}} icon"></i>&nbsp;{{/if}}
+                     {{name}}
+                     {{#if description}}<span class="description">{{description}}</span>{{/if}}
+                 </a>
+                {{else}}
+                 {{#if icon}}<i class="{{icon}} icon"></i>&nbsp;{{/if}}
+                 {{name}}
+                 {{#if description}}<span class="description">{{description}}</span>{{/if}}
+                {{/if}}
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</template>

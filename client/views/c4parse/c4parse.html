@@ -1,0 +1,21 @@
+<template name="c4parse">
+    <div class="c4parse">
+        {{#if getParseStep}}
+        <div class="ui input">
+          <input type="file" placeholder="Open *.c4p" name="c4p" id="c4p">
+        </div>
+        {{/if}}
+
+        {{#if getParseStep 1}}
+        <pre class="project-text">
+            {{getProjectFile}}
+        </pre>
+        {{/if}}
+        
+        {{#if getParseStep 2}}
+        <div>
+            
+        </div>
+        {{/if}}
+    </div>
+</template>

@@ -1,0 +1,15 @@
+<template name="Signin">
+    <div class="m8-signin">
+        {{#if getLoginStatus}}
+        <div class="login-status">
+            {{getLoginStatus}}
+        </div>
+        {{/if}}
+        {{#each getFields}}
+        <div class="ui input">
+            <input type="{{type}}" placeholder="{{placeholder}}" id="{{name}}" name="{{name}}">
+        </div>
+        {{/each}}
+        <button class="ui button primary" id="doLogin" name="doLogin">Log In</button><button class="ui button" id="goRegister" name="goRegister">Register</button>
+    </div>
+</template>
